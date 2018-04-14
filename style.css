@@ -7,4 +7,6 @@ Author URI: http://woocommerce.com
 Template: storefront 
 */  
 
-/* --------------- Theme customization starts here ----------------- *//
+/* --------------- Theme customization starts here ----------------- */
+
+body.woocommerce #primary { width: 100%; }
