@@ -9,4 +9,40 @@ Template: storefront
 
 /* --------------- Theme customization starts here ----------------- */
 
-body.woocommerce #primary { width: 100%; }
+body.woocommerce #primary { 
+	width: 100%; 
+}
+
+/* Header */
+a.site-logo-link, 
+a.site-logo-link img {    
+	margin: 0 auto;
+ }
+
+#site-header-cart {
+    position: absolute;
+    right: 0;
+}
+.home .front__slider {
+	margin-bottom: 75px;
+}
+
+.home .metaslider .flex-control-nav {
+    bottom: -60px;
+}
+
+.home .metaslider .caption-wrap {
+    bottom: -32px;
+}
+
+@media (min-width: 768px) {
+	.woocommerce-active .site-header .main-navigation{
+	    width: 100%;
+	    float: none;
+    	text-align: center;
+	}
+	.site-header {
+		border-bottom: none;
+	}
+    
+}
