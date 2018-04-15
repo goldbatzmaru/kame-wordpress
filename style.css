@@ -35,42 +35,34 @@ a.site-logo-link img {
     font-weight: 600;
 }
 
-.main-navigation ul.menu ul.sub-menu {
-  background-color: #fff;
-  visibility: hidden; /* hides sub-menu */
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  min-width: 150px;
-  transform: translateY(-2em);
-  z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+.main-navigation ul.menu ul.sub-menu li {
+  background-color: #000;
 }
 
-.main-navigation .nav-menu > li:focus ul.sub-menu,
-.main-navigation .nav-menu > li:focus-within ul.sub-menu,
-.main-navigation .nav-menu > li:hover ul.sub-menu
-{
-  visibility: visible; /* shows sub-menu */
-  opacity: 1;
-  z-index: 1;
-  transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s; 
+.main-navigation ul.menu ul.sub-menu li > a {
+	color: #fff;
+}
+
+.main-navigation ul.menu ul.sub-menu li:hover,
+.main-navigation ul.menu ul.sub-menu li:focus {
+	opacity: .8;
+}
+
+.home .main-navigation ul.menu ul.sub-menu {
+  background-color: #fff;
+}
+
+.home .main-navigation ul.menu>li>a, 
+.home .main-navigation ul.nav-menu>li>a,
+.home .main-navigation ul.menu ul.sub-menu li > a {
+	color: #000;
 }
 
 .main-navigation ul.menu ul li a, 
 .main-navigation ul.nav-menu ul li a {
 	color: #000;
 	font-weight: 600;
-	transition: 
 }
-
-.main-navigation ul.menu ul li a:hover, 
-.main-navigation ul.nav-menu ul li a:hover {
-
-} 
 
 @media (min-width: 768px) {
 	.woocommerce-active .site-header .main-navigation{
@@ -79,7 +71,7 @@ a.site-logo-link img {
     	text-align: center;
 	}
 	.site-header {
-		border-bottom: none;
+		border-bottom: 2px solid #000;
 	}  
 }
 
