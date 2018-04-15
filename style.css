@@ -8,12 +8,16 @@ Template: storefront
 */  
 
 /* --------------- Theme customization starts here ----------------- */
-
+/* Fonts */
+h1, h2, h3, h4, h5, h6, body, button, input, textarea {
+	font-family: 'Roboto', 'Open Sans', sans-serif;	
+}
+/* ===== General ===== */
 body.woocommerce #primary { 
 	width: 100%; 
 }
 
-/* Header */
+/* ===== Header ===== */
 a.site-logo-link, 
 a.site-logo-link img {    
 	margin: 0 auto;
@@ -23,17 +27,50 @@ a.site-logo-link img {
     position: absolute;
     right: 0;
 }
-.home .front__slider {
-	margin-bottom: 75px;
+
+.main-navigation ul.menu>li>a, 
+.main-navigation ul.nav-menu>li>a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
 }
 
-.home .metaslider .flex-control-nav {
-    bottom: -60px;
+.main-navigation ul.menu ul.sub-menu {
+  background-color: #fff;
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 150px;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
-.home .metaslider .caption-wrap {
-    bottom: -32px;
+.main-navigation .nav-menu > li:focus ul.sub-menu,
+.main-navigation .nav-menu > li:focus-within ul.sub-menu,
+.main-navigation .nav-menu > li:hover ul.sub-menu
+{
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; 
 }
+
+.main-navigation ul.menu ul li a, 
+.main-navigation ul.nav-menu ul li a {
+	color: #000;
+	font-weight: 600;
+	transition: 
+}
+
+.main-navigation ul.menu ul li a:hover, 
+.main-navigation ul.nav-menu ul li a:hover {
+
+} 
 
 @media (min-width: 768px) {
 	.woocommerce-active .site-header .main-navigation{
@@ -43,6 +80,38 @@ a.site-logo-link img {
 	}
 	.site-header {
 		border-bottom: none;
-	}
-    
+	}  
 }
+
+/* ===== Meta Slider (Home) ===== */
+.home .front__slider {
+	margin-bottom: 75px;
+}
+.home .metaslider .flex-control-nav {
+    bottom: -60px;
+}
+
+.home .metaslider .caption-wrap {
+    font-size: 24px;
+    font-weight: 600;
+    bottom: -45px;
+    text-align: center;
+    background: transparent;
+    color: #000;
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+	background-color: #000;
+    color: #fff;
+}
+
+.widget .widget-title, 
+.widget .widgettitle {
+	border-bottom: 2px solid #333;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+

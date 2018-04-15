@@ -7,6 +7,7 @@ add_action( 'init', 'jk_remove_storefront_header_search' );
 add_action( 'init', 'storefront_custom_logo' );
 add_action( 'init', 'custom_remove_footer_credit', 10 );
 add_action( 'init', 'remove_header_cart' );
+add_action( 'storefront_header', 'jk_storefront_header_content', 40 );
 remove_action( 'storefront_sidebar', 'storefront_get_sidebar',	10 );
 
 // Functions
@@ -45,4 +46,9 @@ function remove_header_cart() {
 
 	remove_action( 'storefront_header', 'storefront_header_cart', 60 );
 
+}
+
+function jk_storefront_header_content() { ?>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+	<?php
 }
