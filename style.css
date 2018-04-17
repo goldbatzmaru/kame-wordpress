@@ -48,14 +48,18 @@ a.site-logo-link img {
 	opacity: .8;
 }
 
-.home .main-navigation ul.menu ul.sub-menu {
-  background-color: #fff;
+.home .main-navigation ul.menu>li>a, 
+.home .main-navigation ul.nav-menu>li>a{
+	color: #000;
 }
 
-.home .main-navigation ul.menu>li>a, 
-.home .main-navigation ul.nav-menu>li>a,
+.home .main-navigation ul.menu ul.sub-menu {
+	border: 2px #fff solid;
+	border-top: none;
+}
+
 .home .main-navigation ul.menu ul.sub-menu li > a {
-	color: #000;
+	color: #fff;
 }
 
 .main-navigation ul.menu ul li a, 
@@ -77,20 +81,24 @@ a.site-logo-link img {
 
 /* ===== Meta Slider (Home) ===== */
 .home .front__slider {
-	margin-bottom: 75px;
+	margin-bottom: 125px;
 }
 .home .metaslider .flex-control-nav {
-    bottom: -60px;
+    bottom: -80px;
 }
 
 .home .metaslider .caption-wrap {
     font-size: 24px;
     font-weight: 600;
-    bottom: -45px;
+    bottom: -60px;
     text-align: center;
     background: transparent;
     color: #000;
     opacity: 1;
+}
+
+.metaslider .slides img {
+	border-radius: 0;
 }
 
 /* ===== Footer ===== */
