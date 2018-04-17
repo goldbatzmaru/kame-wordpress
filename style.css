@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6, body, button, input, textarea {
 body.woocommerce #primary { 
 	width: 100%; 
 }
+@media (min-width: 768px){
+	.col-full {
+    	max-width: 80em;
+	}
+}
 
 /* ===== Header ===== */
 a.site-logo-link, 
